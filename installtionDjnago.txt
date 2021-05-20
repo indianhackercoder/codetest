@@ -1,0 +1,75 @@
+  
+C:\Users\KALKA PRASAD>k:
+
+K:\>python --version
+Python 3.7.2
+
+K:\>md kp
+
+K:\>cd kp
+
+K:\kp>pip --version
+pip 19.1.1 from c:\users\kalka prasad\appdata\local\programs\python\python37\lib\site-packages\pip (python 3.7)
+
+K:\kp>python -m pip install --upgrade pip
+Requirement already up-to-date: pip in c:\users\kalka prasad\appdata\local\programs\python\python37\lib\site-packages (19.1.1)
+
+K:\kp>python -m pip install virtualenv
+Collecting virtualenv
+  Downloading https://files.pythonhosted.org/packages/c4/9a/a3f62ac5122a65dec34ad4b5ed8d802633dae4bc06a0fc62e55fe3e96fe1/virtualenv-16.6.1-py2.py3-none-any.whl (2.0MB)
+     |████████████████████████████████| 2.0MB 100kB/s
+Installing collected packages: virtualenv
+Successfully installed virtualenv-16.6.1
+
+K:\kp>python -m virtualenv env
+Using base prefix 'C:\\Users\\KALKA PRASAD\\AppData\\Local\\Programs\\Python\\Python37'
+New python executable in K:\kp\env\Scripts\python.exe
+Installing setuptools, pip, wheel...
+done.
+
+K:\kp>cd env
+
+K:\kp\env>Scripts\activate
+
+(env) K:\kp\env>python -m pip install django
+Collecting django
+  Downloading https://files.pythonhosted.org/packages/39/b0/2138c31bf13e17afc32277239da53e9dfcce27bac8cb68cf1c0123f1fdf5/Django-2.2.3-py3-none-any.whl (7.5MB)
+     |████████████████████████████████| 7.5MB 35kB/s
+Collecting pytz (from django)
+  Downloading https://files.pythonhosted.org/packages/3d/73/fe30c2daaaa0713420d0382b16fbb761409f532c56bdcc514bf7b6262bb6/pytz-2019.1-py2.py3-none-any.whl (510kB)
+     |████████████████████████████████| 512kB 45kB/s
+Collecting sqlparse (from django)
+  Downloading https://files.pythonhosted.org/packages/ef/53/900f7d2a54557c6a37886585a91336520e5539e3ae2423ff1102daf4f3a7/sqlparse-0.3.0-py2.py3-none-any.whl
+Installing collected packages: pytz, sqlparse, django
+Successfully installed django-2.2.3 pytz-2019.1 sqlparse-0.3.0
+
+(env) K:\kp\env>python -m pip freeze
+Django==2.2.3
+pytz==2019.1
+sqlparse==0.3.0
+
+(env) K:\kp\env>python -m django-admin startproject myproject
+
+(env) K:\kp\env>cd myproject
+
+(env) K:\kp\env\myproject>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+July 05, 2019 - 16:34:08
+Django version 2.2.3, using settings 'myproject.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[05/Jul/2019 16:34:27] "GET / HTTP/1.1" 200 16348
+[05/Jul/2019 16:34:27] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[05/Jul/2019 16:34:27] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[05/Jul/2019 16:34:27] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[05/Jul/2019 16:34:27] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+Not Found: /favicon.ico
+[05/Jul/2019 16:34:27] "GET /favicon.ico HTTP/1.1" 404 1975
+
+(env) K:\kp\env\myproject>
